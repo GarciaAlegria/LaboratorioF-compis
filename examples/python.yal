@@ -1,0 +1,51 @@
+(* Lexer para Gramática No. 1 - Expresiones aritméticas simples para variables *)
+
+{PLUS = "PLUS"
+TIMES = "TIMES"
+ID = "ID" 
+LPAREN = "LPAREN"
+RPAREN = "RPAREN"
+NULL = "NULL"
+TRUE = "TRUE"
+FALSE = "FALSE"
+NUMBER = "NUMBER"
+LT = "LT"
+GT = "GT"
+EQ = "EQUALS"
+SEMICOLON = "SEMICOLON"
+MINUS = "MINUS"
+DDOTS = "DDOTS"}
+
+let delim = [' ''\t''\n']
+let ws = delim+
+let letter = ['A'-'Z''a'-'z']
+
+let digit = (0|1|2|3|4|5|6|7|8|9)
+let digits = digit+
+let id = letter(letter|digit)*"test"
+let cadenas = (digit|letter|ws)*
+let number = digits('.'digits)?('E'['+''-']?digit)?
+
+rule tokens = 
+    ws	      { print("\\WS")}
+  | "if"      { print("IF")}
+  | "null"    { return NULL }
+  | word {return}
+  | "else"    { print("ELSE")}
+  | "True"    { return TRUE }
+  | "False"   { return FALSE }
+  | number    { return NUMBER }
+  | id        { return ID }               (* Cambie por una acción válida, que devuelva el token *)
+  | '+'       { return PLUS }
+  | '*'       { return TIMES }
+  | '('       { return LPAREN }
+  | ')'       { return RPAREN }
+  | '<'       { return LT }
+  | '>'       { return GT }
+  | '='       { return EQ }
+  | ';'       { return SEMICOLON }
+  | ':'       { return DDOTS }
+  | '-'       { return MINUS}
+  
+
+{print('hello')}
