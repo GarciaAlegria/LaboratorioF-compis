@@ -1,6 +1,6 @@
 from LR0 import LR0
 from ReadYalex import Yalex
-from Yapar import Yapar
+from ReadYapar import Yapar
 
 LEXER = "yal/slr-1.yal"
 PARSER = "yalp/slr-1.yalp"
