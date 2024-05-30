@@ -41,12 +41,12 @@ def main(skip_lex=False):
     print_grammar(grammar)
 
     # Save Grammar as pickle
-    with open("grammar.pkl", "wb") as file:
+    with open("gramatica.pkl", "wb") as file:
         import pickle
 
         pickle.dump(grammar, file)
 
-    print("Grammar saved in grammar.pkl")
+    print("Gramatica guardada en gramatica.pkl")
 
 
 if __name__ == "__main__":

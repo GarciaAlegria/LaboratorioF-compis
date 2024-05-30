@@ -19,7 +19,7 @@ def load_tokens(file_path):
 
 if __name__ == "__main__":
 
-    grammar = load_grammar("grammar.pkl")
+    grammar = load_grammar("gramatica.pkl")
     lr0 = LR0.LR0(grammar)
     lr0.visualize().write_pdf("Automata_LR(0).pdf")
     print("LR0 guardado en Automata_LR(0).pdf")
