@@ -4,7 +4,7 @@ from pickle import dump
 from automata.directDfa import DirectDFA
 from automata.Regex import Regex
 from automata.syntax_tree import SyntaxTree
-from Yalex import Yalex
+from ReadYalex import Yalex
 
 YALEX = "yal/slr-1.yal"
 INPUT = "test.txt"

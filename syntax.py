@@ -1,5 +1,5 @@
 from LR0 import LR0
-from Yalex import Yalex
+from ReadYalex import Yalex
 from Yapar import Yapar
 
 LEXER = "yal/slr-1.yal"

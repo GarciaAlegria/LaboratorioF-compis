@@ -3,7 +3,7 @@ import re
 from automata.directDfa import DirectDFA
 from automata.Regex import Regex
 from automata.syntax_tree import SyntaxTree
-from utils import print_definitions, print_rules
+from Utilizar import print_definitions, print_rules
 
 
 class Yalex:
